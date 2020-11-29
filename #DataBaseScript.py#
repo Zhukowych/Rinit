@@ -1,0 +1,21 @@
+import mysql.connector
+mydb = mysql.connector.connect(
+    host="192.168.11.132",
+    user="max",
+    password="beatles",
+    database="hmarka"
+)
+
+mycursor = mydb.cursor()
+
+mycursor.execute("SELECT * FROM reccomendations")
+num_fields = len(cursor.description)
+field_names = [i[0] for i in cursor.description]
+print(fiel)
+#myresult = mycursor.fetchall()
+#for i in myresult:
+#    print(i)
+
+mycursor.execute("TRUNCATE TABLE user_vectors")
+
+
